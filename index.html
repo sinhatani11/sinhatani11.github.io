@@ -1,53 +1,349 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Tanisha Sinha</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            text-align: center;
-            background-color: #f4f4f4;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        img {
-            width: 180px;
-            border-radius: 50%;
-        }
+<title>Tanisha Sinha | Portfolio</title>
 
-        .card {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 0 10px rgba(0,0,0,.1);
-        }
-    </style>
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    color:#333;
+}
+
+nav{
+    background:#1e3a8a;
+    color:white;
+    padding:15px;
+    position:sticky;
+    top:0;
+}
+
+nav ul{
+    display:flex;
+    justify-content:center;
+    list-style:none;
+    gap:30px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+header{
+    background:#2563eb;
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+}
+
+header img{
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    border:5px solid white;
+    margin-bottom:20px;
+    object-fit:cover;
+}
+
+section{
+    max-width:900px;
+    margin:40px auto;
+    padding:25px;
+    background:white;
+    border-radius:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+h2{
+    color:#1e3a8a;
+    margin-bottom:15px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+}
+
+.card{
+    background:#eef4ff;
+    padding:20px;
+    border-radius:10px;
+}
+
+.button{
+    display:inline-block;
+    margin-top:15px;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    padding:10px 20px;
+    border-radius:8px;
+}
+
+.button:hover{
+    background:#1e40af;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:#777;
+}
+
+</style>
 </head>
+
 <body>
-    <div class="card">
-        <img src="profile.jpeg" alt="Profile Picture">
 
-        <h1>Tanisha Sinha</h1>
+<nav>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#journey">Journey</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#leadership">Leadership</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#resume">Resume</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
 
-        <p>Student • STEM Enthusiast • Aspiring Researcher</p>
+<header>
 
-        <h2>About Me</h2>
-        <p>
-            I'm a high school student interested in science,
-            technology, research, and community impact.
-        </p>
+<img src="profile.jpg" alt="Profile Picture">
 
-        <h2>Projects</h2>
-        <ul>
-            <li>Science Fair Project</li>
-            <li>Personal Coding Project</li>
-            <li>Volunteer Initiative</li>
-        </ul>
+<h1>Tanisha Sinha</h1>
 
-        <h2>Contact</h2>
-        <p>Email: sinhatani11@gmail.com</p>
-    </div>
+<p>High School Student • STEM • Business • FBLA</p>
+
+<a class="button" href="resume.pdf">Download Resume</a>
+
+</header>
+
+<section id="about">
+
+<h2>About Me</h2>
+
+<p>
+Hello! I'm Tanisha, a high school student interested in business,
+technology, STEM, and leadership. Through coursework, extracurricular
+activities, and independent projects, I enjoy challenging myself and
+continuing to grow academically and personally.
+</p>
+
+</section>
+
+<section id="education">
+
+<h2>Education</h2>
+
+<p><strong>Your High School</strong></p>
+
+<p>Expected Graduation: 2029</p>
+
+<p>Current GPA: 3.8</p>
+
+</section>
+
+<section id="journey">
+
+<h2>Academic Journey</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Freshman Year</h3>
+
+<ul>
+<li>AP Human Geography</li>
+<li>AP Physics 1</li>
+<li>AP Precalculus</li>
+<li>Joined FBLA</li>
+<li>Volunteer Service</li>
+</ul>
+
+</div>
+
+<div class="card">
+<h3>Sophomore Year</h3>
+
+<ul>
+<li>AP Calculus BC</li>
+<li>APUSH</li>
+<li>AP Spanish</li>
+<li>FBLA Competitions</li>
+<li>Add accomplishments here</li>
+</ul>
+
+</div>
+
+<div class="card">
+<h3>Junior Year</h3>
+
+<ul>
+<li>Add courses</li>
+<li>Add leadership roles</li>
+<li>Add internships</li>
+<li>Add research</li>
+</ul>
+
+</div>
+
+<div class="card">
+<h3>Senior Year</h3>
+
+<ul>
+<li>Add accomplishments</li>
+<li>Add awards</li>
+<li>Add college plans</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2>Projects</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Project 1</h3>
+
+<p>Describe your project here.</p>
+
+</div>
+
+<div class="card">
+
+<h3>Project 2</h3>
+
+<p>Describe your project here.</p>
+
+</div>
+
+<div class="card">
+
+<h3>Project 3</h3>
+
+<p>Describe your project here.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="leadership">
+
+<h2>Leadership & Activities</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>FBLA</h3>
+
+<p>Business competitions, presentations, and leadership development.</p>
+
+</div>
+
+<div class="card">
+
+<h3>Volunteer Service</h3>
+
+<p>Community service and outreach activities.</p>
+
+</div>
+
+<div class="card">
+
+<h3>Clubs</h3>
+
+<p>Add clubs and organizations here.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2>Skills</h2>
+
+<ul>
+
+<li>Public Speaking</li>
+
+<li>Leadership</li>
+
+<li>Python</li>
+
+<li>HTML & CSS</li>
+
+<li>Research</li>
+
+<li>Presentation Design</li>
+
+<li>Teamwork</li>
+
+</ul>
+
+</section>
+
+<section id="resume">
+
+<h2>Resume</h2>
+
+<p>
+
+Click below to download my resume.
+
+</p>
+
+<a class="button" href="resume.pdf">
+
+Download Resume
+
+</a>
+
+</section>
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+<p>Email: your-email@example.com</p>
+
+<p>GitHub: github.com/sinhatani11</p>
+
+<p>LinkedIn: Add your LinkedIn profile</p>
+
+</section>
+
+<footer>
+
+<p>© 2026 Tanisha Sinha</p>
+
+</footer>
+
 </body>
 </html>
