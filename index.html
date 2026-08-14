@@ -8,124 +8,200 @@
 
 <style>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
-    background:#f5f7fb;
-    color:#333;
+html {
+    scroll-behavior: smooth;
 }
 
-nav{
-    background:#1e3a8a;
-    color:white;
-    padding:15px;
-    position:sticky;
-    top:0;
+body {
+    background: #f5f7fb;
+    color: #333;
 }
 
-nav ul{
-    display:flex;
-    justify-content:center;
-    list-style:none;
-    gap:30px;
+/* Navigation */
+
+nav {
+    background: #1e3a8a;
+    color: white;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 20px;
 }
 
-header{
-    background:#2563eb;
-    color:white;
-    text-align:center;
-    padding:60px 20px;
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-header img{
-    width:160px;
-    height:160px;
-    border-radius:50%;
-    border:5px solid white;
-    margin-bottom:20px;
-    object-fit:cover;
+nav a:hover {
+    text-decoration: underline;
 }
 
-section{
-    max-width:900px;
-    margin:40px auto;
-    padding:25px;
-    background:white;
-    border-radius:12px;
-    box-shadow:0 2px 8px rgba(0,0,0,.1);
+/* Header */
+
+header {
+    background: #2563eb;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
 }
 
-h2{
-    color:#1e3a8a;
-    margin-bottom:15px;
+header img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 5px solid white;
+    margin-bottom: 20px;
+    object-fit: cover;
 }
 
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:15px;
+header h1 {
+    margin-bottom: 10px;
 }
 
-.card{
-    background:#eef4ff;
-    padding:20px;
-    border-radius:10px;
+/* Sections */
+
+section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
 }
 
-.button{
-    display:inline-block;
-    margin-top:15px;
-    background:#2563eb;
-    color:white;
-    text-decoration:none;
-    padding:10px 20px;
-    border-radius:8px;
+h2 {
+    color: #1e3a8a;
+    margin-bottom: 15px;
 }
 
-.button:hover{
-    background:#1e40af;
+h3 {
+    margin-bottom: 10px;
 }
 
-footer{
-    text-align:center;
-    padding:30px;
-    color:#777;
-}
-.certificate-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-    gap:20px;
-    text-align:center;
+/* Cards */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
 }
 
-.certificate img{
-    width:100%;
-    height:110px;
-    object-fit:cover;
-    border-radius:10px;
-    box-shadow:0 2px 8px rgba(0,0,0,.15);
-    transition:.25s;
+.card {
+    background: #eef4ff;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
 }
 
-.certificate img:hover{
-    transform:scale(1.05);
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 12px rgba(0,0,0,.1);
 }
 
-.certificate p{
-    margin-top:8px;
-    font-weight:bold;
-    font-size:14px;
+.card ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.card li {
+    margin-bottom: 6px;
+}
+
+/* Buttons */
+
+.button {
+    display: inline-block;
+    margin-top: 15px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.button:hover {
+    background: #1e40af;
+}
+
+/* Certifications */
+
+.certificate-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.certificate {
+    background: #f8fafc;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.certificate img {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.15);
+    transition: 0.25s;
+}
+
+.certificate img:hover {
+    transform: scale(1.05);
+}
+
+.certificate p {
+    margin-top: 8px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #777;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    nav ul {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    section {
+        margin: 25px 15px;
+    }
+
 }
 
 </style>
@@ -133,21 +209,26 @@ footer{
 
 <body>
 
+<!-- Navigation -->
+
 <nav>
 <ul>
-<li><a href="#about">About</a></li>
-<li><a href="#education">Education</a></li>
-<li><a href="#journey">Journey</a></li>
-<li><a href="#leadership">Leadership</a></li>
-<li><a href="#accomplishments">Accomplishments</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#sports">Sports</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#certifications">Certifications</a></li>
-<li><a href="#resume">Resume</a></li>
-<li><a href="#contact">Contact</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#journey">Journey</a></li>
+    <li><a href="#leadership">Leadership</a></li>
+    <li><a href="#accomplishments">Accomplishments</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#sports">Sports</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#resume">Resume</a></li>
+    <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
+
+
+<!-- Header -->
 
 <header>
 
@@ -157,9 +238,14 @@ footer{
 
 <p>High School Student • STEM • Business • FBLA</p>
 
-<a class="button" href="resume.pdf">Download Resume</a>
+<a class="button" href="resume.pdf">
+    Download Resume
+</a>
 
 </header>
+
+
+<!-- About -->
 
 <section id="about">
 
@@ -174,6 +260,9 @@ continuing to grow academically and personally.
 
 </section>
 
+
+<!-- Education -->
+
 <section id="education">
 
 <h2>Education</h2>
@@ -182,8 +271,10 @@ continuing to grow academically and personally.
 
 <p>Expected Graduation: 2029</p>
 
-
 </section>
+
+
+<!-- High School Journey -->
 
 <section id="journey">
 
@@ -191,135 +282,164 @@ continuing to grow academically and personally.
 
 <div class="cards">
 
-<div class="card">
-<h3>Freshman Year</h3>
+    <!-- Freshman -->
 
-<ul>
-<li>AP Human Geography</li>
-<li>AP Physics 1</li>
-<li>AP Precalculus</li>
-<li>FBLA leadership</li>
-<li>Add accomplishments here</li>
+    <div class="card">
 
-</ul>
+        <h3>Freshman Year</h3>
+
+        <ul>
+            <li>AP Human Geography</li>
+            <li>AP Physics 1</li>
+            <li>AP Precalculus</li>
+            <li>FBLA</li>
+            <li>Add accomplishments here</li>
+        </ul>
+
+    </div>
+
+
+    <!-- Sophomore -->
+
+    <div class="card">
+
+        <h3>Sophomore Year</h3>
+
+        <ul>
+            <li>AP Calculus BC</li>
+            <li>APUSH</li>
+            <li>AP Spanish</li>
+            <li>FBLA</li>
+            <li>Add accomplishments here</li>
+        </ul>
+
+    </div>
+
+
+    <!-- Junior -->
+
+    <div class="card">
+
+        <h3>Junior Year</h3>
+
+        <ul>
+            <li>Add courses</li>
+            <li>Add leadership roles</li>
+            <li>Add internships</li>
+            <li>Add research</li>
+        </ul>
+
+    </div>
+
+
+    <!-- Senior -->
+
+    <div class="card">
+
+        <h3>Senior Year</h3>
+
+        <ul>
+            <li>Add accomplishments</li>
+            <li>Add awards</li>
+            <li>Add college plans</li>
+        </ul>
+
+    </div>
 
 </div>
 
-<div class="card">
-<h3>Sophomore Year</h3>
-
-<ul>
-<li>AP Calculus BC</li>
-<li>APUSH</li>
-<li>AP Spanish</li>
-<li>FBLA leadership</li>
-<li>Add accomplishments here</li>
-</ul>
-
-</div>
-
-<div class="card">
-<h3>Junior Year</h3>
-
-<ul>
-<li>Add courses</li>
-<li>Add leadership roles</li>
-<li>Add internships</li>
-<li>Add research</li>
-</ul>
-
-</div>
-
-<div class="card">
-<h3>Senior Year</h3>
-
-<ul>
-<li>Add accomplishments</li>
-<li>Add awards</li>
-<li>Add college plans</li>
-</ul>
-
-</div>
-    
 </section>
+
+
+<!-- Leadership -->
 
 <section id="leadership">
 
-<h2>Leadership & Activities</h2>
+<h2>Leadership</h2>
 
 <div class="cards">
 
-<div class="card">
+    <div class="card">
 
-<h3>FBLA</h3>
+        <h3>FBLA</h3>
 
-<p>Business competitions, presentations, and leadership development.</p>
+        <li>8th grade - FBLA Middle President</li>
+        <li>9th grade - FBLA Registration officer</li>
+        <li>10th grade - FBLA Recruitment/Membership officer</li>
+    </div>
 
-</div>
+    <div class="card">
 
-<div class="card">
+        <h3>Clubs</h3>
 
-<h3>Volunteer Service</h3>
+        <p>
+        Add clubs and organizations here.
+        </p>
 
-<p>Community service and outreach activities.</p>
-    
-</div>
-
-<div class="card">
-
-<h3>Clubs</h3>
-
-<p>Add clubs and organizations here.</p>
+    </div>
 
 </div>
-    
-</div>
+
+</section>
+
+
+<!-- Accomplishments -->
+
 <section id="accomplishments">
 
 <h2>Clubs & Accomplishments</h2>
 
 <div class="cards">
 
+    <!-- FBLA -->
+
     <div class="card">
+
         <h3>FBLA</h3>
 
         <p>
-            Business, leadership, and competitive events.
+        Member since: 2023
         </p>
 
         <ul>
-            <li>Member since: 2026</li>
-            <li>Competitive Event: Add here</li>
+            <li>8th grade - Marketing Mix Challenge 4th place</li>
+            <li>8th grade - Intro to Business Issues 4th place</li>
             <li>Competition Results: Add here</li>
-            <li>Leadership Role: Add here</li>
             <li>Other Accomplishment: Add here</li>
         </ul>
+
     </div>
 
 
+    <!-- HOSA -->
+
     <div class="card">
+
         <h3>HOSA</h3>
 
         <p>
-            Exploring healthcare, science, and leadership
-            through HOSA activities and competitions.
+        Member since 2023
         </p>
 
         <ul>
-            <li>Member since: 2026</li>
-            <li>Event: Add here</li>
-            <li>Competition Results: Add here</li>
+            <li>7th grade - Dynamic Decisions 1st place</li>
+            <li>7th grade - </li>\
+            <li>8th grade - Public Health 1st place/li>
             <li>Leadership Role: Add here</li>
             <li>Other Accomplishment: Add here</li>
         </ul>
+
     </div>
 
 
+    <!-- Other Club -->
+
     <div class="card">
+
         <h3>Other Club</h3>
 
         <p>
-            Briefly describe what the club focuses on.
+        Briefly describe what the club focuses on.
         </p>
 
         <ul>
@@ -328,14 +448,18 @@ continuing to grow academically and personally.
             <li>Leadership: ____</li>
             <li>Achievement: ____</li>
         </ul>
+
     </div>
 
 
+    <!-- Other Activity -->
+
     <div class="card">
+
         <h3>Other Activity</h3>
 
         <p>
-            Brief description of the activity.
+        Brief description of the activity.
         </p>
 
         <ul>
@@ -343,14 +467,15 @@ continuing to grow academically and personally.
             <li>Project: ____</li>
             <li>Achievement: ____</li>
         </ul>
+
     </div>
 
 </div>
 
 </section>
-</div>
 
-</section>
+
+<!-- Projects -->
 
 <section id="projects">
 
@@ -358,79 +483,93 @@ continuing to grow academically and personally.
 
 <div class="cards">
 
-<div class="card">
+    <div class="card">
 
-<h3>Project 1</h3>
+        <h3>Project 1</h3>
 
-<p>Describe your project here.</p>
+        <p>
+        Describe your project here.
+        </p>
 
-</div>
+    </div>
 
-<div class="card">
 
-<h3>Project 2</h3>
+    <div class="card">
 
-<p>Describe your project here.</p>
+        <h3>Project 2</h3>
 
-</div>
+        <p>
+        Describe your project here.
+        </p>
 
-<div class="card">
+    </div>
 
-<h3>Project 3</h3>
 
-<p>Describe your project here.</p>
+    <div class="card">
 
-</div>
-    
+        <h3>Project 3</h3>
+
+        <p>
+        Describe your project here.
+        </p>
+
+    </div>
+
 </div>
 
 </section>
-    
+
+
+<!-- Sports -->
+
 <section id="sports">
 
 <h2>Sports</h2>
 
 <div class="cards">
 
-<div class="card">
+    <div class="card">
 
-<h3>Skiing</h3>
+        <h3>Skiing</h3>
 
-<ul>
-<li>Years skiing: Add here</li>
-<li>Competitions: Add here</li>
-<li>Awards: Add here</li>
-</ul>
+        <p>
+        Add information about your skiing experience,
+        competitions, and goals.
+        </p>
 
-</div>
+        <ul>
+            <li>Years skiing: Add here</li>
+            <li>Competitions: Add here</li>
+            <li>Awards: Add here</li>
+        </ul>
+
+    </div>
 
 </div>
 
 </section>
+
+
+<!-- Skills -->
 
 <section id="skills">
 
 <h2>Skills</h2>
 
 <ul>
-
-<li>Public Speaking</li>
-
-<li>Leadership</li>
-
-<li>Python</li>
-
-<li>HTML & CSS</li>
-
-<li>Research</li>
-
-<li>Presentation Design</li>
-
-<li>Teamwork</li>
-
+    <li>Public Speaking</li>
+    <li>Leadership</li>
+    <li>Python</li>
+    <li>HTML & CSS</li>
+    <li>Research</li>
+    <li>Presentation Design</li>
+    <li>Teamwork</li>
 </ul>
 
 </section>
+
+
+<!-- Certifications -->
 
 <section id="certifications">
 
@@ -439,37 +578,75 @@ continuing to grow academically and personally.
 <div class="certificate-grid">
 
     <div class="certificate">
-        <a href="certificates/gwc_intro_cyber.pdf.jpg" target="_blank">
-            <img src="certificates/gwc_intro_cyber.pdf.jpg" alt="Intro to Cybersecurity certificate">
+
+        <a href="certificates/gwc_intro_cyber.pdf" target="_blank">
+
+            <img
+                src="certificates/gwc_intro_cyber.jpg"
+                alt="Intro to Cybersecurity Certificate"
+            >
+
         </a>
+
         <p>GWC Intro to Cybersecurity Course</p>
+
     </div>
 
+
     <div class="certificate">
-        <a href="certificates/gwc_intro_data.pdf.jpg" target="_blank">
-            <img src="certificates/gwc_intro_data.pdf.jpg" alt="Intro to Data Science certificate">
+
+        <a href="certificates/gwc_intro_data.pdf" target="_blank">
+
+            <img
+                src="certificates/gwc_intro_data.jpg"
+                alt="Intro to Data Science Certificate"
+            >
+
         </a>
+
         <p>GWC Intro to Data Science Course</p>
+
     </div>
 
+
     <div class="certificate">
-        <a href="certificates/gwc_intro_crypto.pdf.jpg" target="_blank">
-            <img src="certificates/gwc_intro_crypto.pdf.jpg" alt="Intro to Cryptography certificate">
+
+        <a href="certificates/gwc_intro_crypto.pdf" target="_blank">
+
+            <img
+                src="certificates/gwc_intro_crypto.jpg"
+                alt="Intro to Cryptography Certificate"
+            >
+
         </a>
+
         <p>GWC Intro to Cryptography Course</p>
+
     </div>
 
+
     <div class="certificate">
-        <a href="certificates/gwc_intro_ml.pdf.jpg" target="_blank">
-            <img src="certificates/gwc_intro_ml.pdf.jpg" alt="Intro to Machine Learning certificate">
+
+        <a href="certificates/gwc_intro_ml.pdf" target="_blank">
+
+            <img
+                src="certificates/gwc_intro_ml.jpg"
+                alt="Intro to Machine Learning Certificate"
+            >
+
         </a>
+
         <p>GWC Intro to Machine Learning Course</p>
+
     </div>
 
 </div>
 
 </section>
-    
+
+
+<!-- Resume -->
+
 <section id="resume">
 
 <h2>Resume</h2>
@@ -479,20 +656,33 @@ Click below to view or download my resume.
 </p>
 
 <a class="button" href="resume.pdf">
-Download Resume
+    Download Resume
 </a>
 
 </section>
-    
+
+
+<!-- Contact -->
+
 <section id="contact">
 
 <h2>Contact</h2>
 
-<p>Email: sinhatani11@gmail.com</p>
+<p>
+Email:
+<a href="mailto:sinhatani11@gmail.com">
+sinhatani11@gmail.com
+</a>
+</p>
 
-<p>LinkedIn: Add your LinkedIn profile</p>
+<p>
+LinkedIn: Add your LinkedIn profile
+</p>
 
 </section>
+
+
+<!-- Footer -->
 
 <footer>
 
